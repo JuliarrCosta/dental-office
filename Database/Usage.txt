@@ -1,0 +1,4 @@
+A ideia inicial era ter arquivos json funcionando como tabelas e um conector em javascript
+para fazer leitura e escrita no arquivo. Fazer manipulação com parse
+e stringify transformando esse diretório em um mini BD. Porém percebi que o CRUD ficaria mais complexo, 
+então decidi que faria com objeto javascript msm, que muda poucas coisas em relação ao JSON.
