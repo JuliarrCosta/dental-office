@@ -1,4 +1,4 @@
-import { Dentista } from './Dentista.js';
+import { Dentista } from '../Class/Dentista.js';
 
 export const database_dentista = {
     Dentista : [

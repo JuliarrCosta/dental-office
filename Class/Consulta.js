@@ -1,4 +1,4 @@
-class Consulta{
+export class Consulta{
     #patient;
     #date;
     #input

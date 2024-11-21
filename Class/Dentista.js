@@ -1,4 +1,4 @@
-class Dentista{
+export class Dentista{
     #name;
     #CRO;
 

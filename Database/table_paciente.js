@@ -1,4 +1,4 @@
-import { Paciente } from './Paciente.js';
+import { Paciente } from '../Class/Paciente.js';
 
 export const database_paciente = {
     Paciente : [

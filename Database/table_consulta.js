@@ -1,7 +1,6 @@
-import { Consulta } from './Consulta.js';
-import { database_dentista } from './table_dentista.js';
-import { database_paciente } from './table_paciente.js';
-
+import { Consulta } from 'consultorio/Class/Consulta.js';
+import { database_dentista } from '../Database/table_dentista.js';
+import { database_paciente } from '../Database/table_paciente.js';
 
 export const database_consulta = {
     Consulta : [

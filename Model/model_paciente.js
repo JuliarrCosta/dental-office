@@ -1,8 +1,8 @@
-import { database_paciente } from "../Database/table_paciente"
-import { validatorAge, validatorConsulta, validatorDate } from "../Controller/validatorDateHour"
-import { validateCPF } from "../Controller/validatorCPF"
-import { validatorName } from "../Controller/validatorName"
-import { isEqualCPF } from "../Controller/validatorCPF"
+import { database_paciente } from "../Database/table_paciente.js"
+import { validatorAge, validatorConsulta, validatorDate } from "../Controller/validatorDateHour.js"
+import { validateCPF } from "../Controller/validatorCPF.js"
+import { validatorName } from "../Controller/validatorName.js"
+import { isEqualCPF } from "../Controller/validatorCPF.js"
 
 
 function create_paciente(cpf, name, date){

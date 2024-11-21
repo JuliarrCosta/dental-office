@@ -1,7 +1,6 @@
 import { DateTime } from "luxon";
 import PromptSync from "prompt-sync";
-import { database_consulta } from "../Database/table_consulta";
-import { format } from "cpf-check";
+import { database_consulta } from "../Database/table_consulta.js";
 
 const prompt = PromptSync();
 
@@ -30,6 +29,7 @@ export function validatorAge(dateOfBirth){
 
 }
 
+// testar
 export function validatorConsulta(cpf){
     
     const format = "dd/MM/yyyy"
@@ -73,3 +73,5 @@ export function validatorHourConsulta(input){
 const dateOfBirth = prompt("Data de nascimento(dd/MM/yyyy): ")
 console.log(validatorAge(dateOfBirth))
 
+const cpf = prompt("Qual cpf deseja buscar: ")
+console.log(validatorConsulta(cpf))
