@@ -1,6 +1,6 @@
 import PromptSync from "prompt-sync";
 import CPF from 'cpf-check';
-import { database_paciente } from "../Database/table_paciente";
+import { database_paciente } from "../Database/table_paciente.js";
 
 /** Link da biblioteca: https://github.com/flasd/cpf-check#readme  */
 const prompt = PromptSync()

@@ -19,13 +19,15 @@ export function validatorDate(date){
 //redundante a validação da data
 export function validatorAge(dateOfBirth){
     const now = DateTime.now()
-    if(validatorDate(dateOfBirth)){
-        if(now.diff(date, ["years"]).as("years") >= 13){
-            return true;
-        }else{
-            return false
-        }
+    const dateFormated = DateTime.fromFormat(dateOfBirth, "dd/MM/yyyy")
+    
+    if(now.diff(dateFormated, ["years"]).as("years") >= 13){
+        return true;
+    }else{
+        console.log(now.diff(dateFormated, ["years"]).as("years"))
+        return false
     }
+    
 
 }
 

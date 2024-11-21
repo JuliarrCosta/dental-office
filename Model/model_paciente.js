@@ -5,14 +5,14 @@ import { validatorName } from "../Controller/validatorName.js"
 import { isEqualCPF } from "../Controller/validatorCPF.js"
 
 
-function create_paciente(cpf, name, date){
+export function create_paciente(cpf, name, date){
     if(validateCPF(cpf)){
         if(!isEqualCPF(cpf)){
             if(validatorName(name)){
                 if(validatorDate){
                     if(validatorAge){
                         database_paciente.Paciente.push(cpf, name, date)
-                        return 1
+                        return 0
                     }else{
                         return "Erro: Paciente não possui data mínima"
                     }
@@ -30,14 +30,14 @@ function create_paciente(cpf, name, date){
     }
 }
 // utilizando esse 1 como se fosse um true para fazer a interface dps
-function delete_paciente(cpf){
+export function delete_paciente(cpf){
     if(isEqualCPF(cpf)){
         if(!validatorConsulta(cpf)){
             const index = database_paciente.Paciente.findIndex(paciente => paciente.cpf === cpf)
             if(index !== -1){
                 database_paciente.Paciente.splice(index, 1)
                 console.log("Paciente deletado com sucesso!")
-                return 1
+                return 0
             }
         }else{
             return "Erro: O paciente possui uma consulta futura agendada!"
