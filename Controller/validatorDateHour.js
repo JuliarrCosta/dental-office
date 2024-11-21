@@ -53,7 +53,7 @@ export function validatorHourFormated(hour){
     const min = DateTime.fromFormat("8:00", format)
 
     if(hourFormated.isValid){
-        if(hour < max || hour > min){
+        if(DateTime.fromFormat(hour, format) < DateTime.fromFormat(max, format) || DateTime.fromFormat(hour, format) > DateTime.fromFormat(min, format)){
             return true
         }
     }else{

@@ -40,10 +40,11 @@ export function delete_paciente(cpf){
                 return 0
             }
         }else{
-            return "Erro: O paciente possui uma consulta futura agendada!"
+            return "Erro: O paciente possui uma consulta agendada!"
 
         }
     }else{
         return "Erro: Paciente não existe!"
     }
 }
+

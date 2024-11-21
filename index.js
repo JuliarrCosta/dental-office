@@ -12,7 +12,7 @@ do{
         case 1: {
             let aux;
             do{
-                aux = parseInt(prompt("---------------- MENU PRINCIPAL ------------------\n 1-Cadastrar Paciente \n 2- Excluir Paciente \n 0- Voltar ao menu principal \n \n"))
+                aux = parseInt(prompt("---------------- MENU PRINCIPAL ------------------\n 1-Cadastrar Paciente \n 2- Excluir Paciente \n 3-Listar paciente \n 4-  \n 0- Voltar ao menu principal \n \n"))
                 switch(aux){
                     case 1:
                         aux = 0;
