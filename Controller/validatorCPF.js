@@ -14,6 +14,7 @@ export function validateCPF(cpf){
     }
 }
 
+//usar esse método também para verificar cpf no bd
 // metodo com nome estranho, alterar dps
 export function isEqualCPF(cpf){
     database_paciente.Paciente.forEach( paciente => {
