@@ -4,7 +4,8 @@ import { database_consulta } from "../Database/table_consulta.js";
 
 const prompt = PromptSync();
 
-//valida e formata se precisar
+//valida e formata se precisar [TESTADA]
+
 export function validatorDate(date){
     const format = "dd/MM/yyyy"
     const dateFormated = DateTime.fromFormat(date, format)
@@ -16,7 +17,7 @@ export function validatorDate(date){
     }
 }
 
-//redundante a validação da data
+//redundante a validação da data [TESTADA]
 export function validatorAge(dateOfBirth){
     const now = DateTime.now()
     const dateFormated = DateTime.fromFormat(dateOfBirth, "dd/MM/yyyy")
@@ -31,7 +32,7 @@ export function validatorAge(dateOfBirth){
 
 }
 
-// testar
+// [TESTADA]
 export function validatorConsulta(cpf){
     
     const format = "dd/MM/yyyy"
@@ -46,14 +47,14 @@ export function validatorConsulta(cpf){
     return false
 }
 
+// [TESTADA]
 export function validatorHourFormated(hour){
     const format = "HH:mm"
     const hourFormated = DateTime.fromFormat(hour, format)
     const max = DateTime.fromFormat("19:00", format)
     const min = DateTime.fromFormat("8:00", format)
-
     if(hourFormated.isValid){
-        if(DateTime.fromFormat(hour, format) < DateTime.fromFormat(max, format) || DateTime.fromFormat(hour, format) > DateTime.fromFormat(min, format)){
+        if(hourFormated < max|| hourFormated > min ){
             return true
         }
     }else{
@@ -62,7 +63,7 @@ export function validatorHourFormated(hour){
 
 }
 
-//Já que cada consulta deve ter no máximo 15 minutos, o sistema vai setar automaticamente
+//Já que cada consulta deve ter no máximo 15 minutos, o sistema vai setar automaticamente [TESTADA]
 export function validatorHourConsulta(input){
     const format = "HH:mm"
     const hourFormated = DateTime.fromFormat(input, format)
@@ -71,9 +72,10 @@ export function validatorHourConsulta(input){
     return output
     
 }
+// criar função para saber se os minutos são multiplos de 15 ou integrar na função hourFormated
+
 
 // Testando função
-
 const dateOfBirth = prompt("Data de nascimento(dd/MM/yyyy): ")
 console.log(validatorAge(dateOfBirth))
 
@@ -81,4 +83,5 @@ const cpf = prompt("Qual cpf deseja buscar: ")
 console.log(validatorConsulta(cpf))
 
 const hora = prompt("Digite a hora: \n")
-console.log(validatorHourConsulta(hora))
+//console.log(validatorHourConsulta(hora))
+console.log(validatorHourFormated(hora))
