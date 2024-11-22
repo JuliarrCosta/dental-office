@@ -3,15 +3,19 @@ import { validatorAge, validatorConsulta, validatorDate } from "../Controller/va
 import { validateCPF } from "../Controller/validatorCPF.js"
 import { validatorName } from "../Controller/validatorName.js"
 import { isEqualCPF } from "../Controller/validatorCPF.js"
+import { Paciente } from "../Class/Paciente.js"
+
+import PromptSync from "prompt-sync"
+const prompt = PromptSync()
 
 
 export function create_paciente(cpf, name, date){
     if(validateCPF(cpf)){
         if(!isEqualCPF(cpf)){
             if(validatorName(name)){
-                if(validatorDate){
-                    if(validatorAge){
-                        database_paciente.Paciente.push(cpf, name, date)
+                if(validatorDate(date)){                   
+                    if(validatorAge(date)){
+                        database_paciente.Paciente.push(new Paciente(cpf, name, date))
                         return 0
                     }else{
                         return "Erro: Paciente não possui data mínima"
@@ -48,3 +52,13 @@ export function delete_paciente(cpf){
     }
 }
 
+//Fazer listagem de paciente
+
+//testar 
+
+const cpf = prompt("Digite seu cpf: ")
+const nome = prompt("Digite seu nome: ")
+const dataNascimento = prompt("Digite sua data de nascimento: ")
+
+//Função não tá escrevendo no database
+console.log(create_paciente(cpf, nome, dataNascimento))

@@ -25,7 +25,6 @@ export function validatorAge(dateOfBirth){
     if(now.diff(dateFormated, ["years"]).as("years") >= 13){
         return true;
     }else{
-        console.log(now.diff(dateFormated, ["years"]).as("years"))
         return false
     }
     
@@ -76,12 +75,12 @@ export function validatorHourConsulta(input){
 
 
 // Testando função
-const dateOfBirth = prompt("Data de nascimento(dd/MM/yyyy): ")
-console.log(validatorAge(dateOfBirth))
+//const dateOfBirth = prompt("Data de nascimento(dd/MM/yyyy): ")
+//console.log(validatorAge(dateOfBirth))
 
-const cpf = prompt("Qual cpf deseja buscar: ")
-console.log(validatorConsulta(cpf))
+//const cpf = prompt("Qual cpf deseja buscar: ")
+//console.log(validatorConsulta(cpf))
 
-const hora = prompt("Digite a hora: \n")
+//const hora = prompt("Digite a hora: \n")
 //console.log(validatorHourConsulta(hora))
-console.log(validatorHourFormated(hora))
+//console.log(validatorHourFormated(hora))

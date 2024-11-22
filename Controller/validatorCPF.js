@@ -27,5 +27,5 @@ export function isEqualCPF(cpf){
 
 //criar função para ver se o dentista existe, teoricamente teria que verificar se o dentista está disponível. Porém vou tratar apenas existindo um dentista
 
-const cpf = prompt("Digite o cpf")
-console.log(validateCPF(cpf), isEqualCPF(cpf))
+//const cpf = prompt("Digite o cpf")
+//console.log(validateCPF(cpf), isEqualCPF(cpf))

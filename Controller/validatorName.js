@@ -11,5 +11,5 @@ export function validatorName(name){
 }
 
 
-const name = prompt("Nome do paciente: ")
-console.log(validatorName(name))
+//const name = prompt("Nome do paciente: ")
+//console.log(validatorName(name))
