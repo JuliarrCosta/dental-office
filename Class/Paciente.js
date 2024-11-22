@@ -1,37 +1,25 @@
 export class Paciente{
 
-    #cpf;
-    #name;
-    #dateOfBirth;
+    _cpf;
+    _name;
+    _dateOfBirth;
     
     constructor(cpf, name, date){
-        this.#cpf = cpf
-        this.#dateOfBirth = date
-        this.#name = name
+        this._cpf = cpf
+        this._name = name
+        this._dateOfBirth = date
     }
 
     get name(){
-        return this.#name;
+        return this._name;
     }
     
     get cpf(){
-        return this.#cpf
+        return this._cpf
     }
 
     get dateOfBirth(){
-        return this.#dateOfBirth
-    }
-
-    set cpf(cpf){
-        this.#cpf = cpf
-    }
-
-    set name(name){
-        this.#name = name
-    }
-
-    set dateOfBirth(date){
-        this.#dateOfBirth = date
+        return this._dateOfBirth
     }
 
 

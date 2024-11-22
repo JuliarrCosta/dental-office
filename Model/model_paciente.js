@@ -1,4 +1,4 @@
-import { database_paciente } from "../Database/table_paciente.js"
+import { database_paciente } from "consultorio/Database/table_paciente.js"
 import { validatorAge, validatorConsulta, validatorDate } from "../Controller/validatorDateHour.js"
 import { validateCPF } from "../Controller/validatorCPF.js"
 import { validatorName } from "../Controller/validatorName.js"
@@ -56,9 +56,10 @@ export function delete_paciente(cpf){
 
 //testar 
 
-const cpf = prompt("Digite seu cpf: ")
-const nome = prompt("Digite seu nome: ")
-const dataNascimento = prompt("Digite sua data de nascimento: ")
+const cpf = "000.000.000-00"
+const nome = "Testee"
+const dataNascimento = "10/10/1999"
 
 //Função não tá escrevendo no database
-console.log(create_paciente(cpf, nome, dataNascimento))
+//console.log(create_paciente(cpf, nome, dataNascimento))
+//console.log(database_paciente.Paciente[1].cpf);
