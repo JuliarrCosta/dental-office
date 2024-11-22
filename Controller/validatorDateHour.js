@@ -64,10 +64,12 @@ export function validatorHourFormated(hour){
 
 //Já que cada consulta deve ter no máximo 15 minutos, o sistema vai setar automaticamente
 export function validatorHourConsulta(input){
-    if(validatorHourFormated(input)){
-        return input.plus({minutes: 15})
-    }
-    return false
+    const format = "HH:mm"
+    const hourFormated = DateTime.fromFormat(input, format)
+    const output = hourFormated.plus({minutes: 15}).toFormat("HH:mm")
+    
+    return output
+    
 }
 
 // Testando função
@@ -77,3 +79,6 @@ console.log(validatorAge(dateOfBirth))
 
 const cpf = prompt("Qual cpf deseja buscar: ")
 console.log(validatorConsulta(cpf))
+
+const hora = prompt("Digite a hora: \n")
+console.log(validatorHourConsulta(hora))
